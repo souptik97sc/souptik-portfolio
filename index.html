@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#17322f" name="theme-color"/>
+<meta content="Souptik Chaki — enterprise customer success manager with a commercial edge. Customer growth, retention, strategic advisory, and a human approach to complex customer work." name="description"/>
+<title>Souptik Chaki | Customer Success with a commercial edge</title>
+<style>
+    :root{
+      --ink:#16312e; --ink2:#23423d; --muted:#61706c; --paper:#faf8f3; --wash:#edf1ea; --card:#ffffff; --line:#d7dfd8;
+      --deep:#17322f; --moss:#2f6b5b; --mint:#d7f8b4; --mint2:#edf8dc; --peach:#f7e1cf; --sky:#dcecef; --shadow:0 20px 55px rgba(15,34,31,.08);
+      --sans:Inter,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; --serif:Georgia,'Times New Roman',serif;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:86px}
+    body{margin:0;font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+    img{max-width:100%;display:block}
+    a{color:inherit}
+    a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #c9772a;outline-offset:4px}
+    ::selection{background:var(--mint);color:var(--deep)}
+    .container{width:min(1180px, calc(100% - 40px)); margin:auto}
+    .skip{position:absolute;left:12px;top:-70px;background:#fff;padding:10px 14px;border-radius:10px;z-index:999}.skip:focus{top:12px}
+    .header{position:sticky;top:0;z-index:100;background:rgba(250,248,243,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}
+    .brand{text-decoration:none;font-size:26px;font-weight:850;letter-spacing:-.06em;line-height:1;color:var(--ink)}
+    .brand small{display:block;font-size:9px;font-weight:700;color:var(--muted);letter-spacing:.16em;text-transform:uppercase;margin-top:7px}
+    .brand b{color:var(--moss)}
+    .navlinks{display:flex;gap:20px;flex-wrap:wrap;align-items:center;font-size:12px;font-weight:800}
+    .navlinks a{text-decoration:none;color:var(--ink2)}
+    .navlinks a:hover{color:var(--moss)}
+    .pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:999px;font-size:12px;font-weight:850;text-decoration:none;transition:transform .18s ease, background .18s ease}
+    .pill:hover{transform:translateY(-2px)}
+    .pill.dark{background:var(--deep);color:#fff}
+    .pill.light{background:#fff;border:1px solid #b8c5bc;color:var(--ink)}
+    .pill.mint{background:var(--mint);color:var(--deep)}
+    .eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.18em;font-weight:900;color:var(--moss)}
+
+    .hero{padding:68px 0 84px}
+    .hero-wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:54px;align-items:center}
+    .hello-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 13px;font-size:12px;font-weight:800;color:var(--ink2);box-shadow:var(--shadow)}
+    .hello-badge .dot{width:9px;height:9px;background:#70c087;border-radius:50%;box-shadow:0 0 0 6px rgba(112,192,135,.16)}
+    h1{font-size:clamp(48px,7vw,92px);line-height:1.01;letter-spacing:-.085em;font-weight:820;margin:20px 0 20px}
+    h1 em{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--moss)}
+    .lead{font-size:19px;color:#3e524d;max-width:700px;margin:0}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .quickbits{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+    .quickbits span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 12px;font-size:12px;font-weight:800;color:#37514b}
+    .mini-note{margin-top:18px;font-size:13px;color:#6a7772}
+
+    .intro-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:18px;overflow:hidden}
+    .intro-card::before{content:'';position:absolute;inset:auto -30px -30px auto;width:220px;height:220px;background:radial-gradient(circle at center, rgba(215,248,180,.55), rgba(215,248,180,0));pointer-events:none}
+    .portrait{border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:var(--wash)}
+    .portrait img{width:100%;height:100%;object-fit:cover}
+    .intro-stickers{position:absolute;left:18px;top:18px;display:flex;gap:8px;flex-wrap:wrap;max-width:72%}
+    .sticker{background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border:1px solid rgba(214,223,216,.95);padding:8px 11px;border-radius:999px;font-size:11px;font-weight:900;color:#24463e;box-shadow:0 10px 25px rgba(16,44,43,.08)}
+    .intro-caption{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:end;padding:16px 6px 4px}
+    .intro-caption h2{font-size:28px;line-height:1.1;letter-spacing:-.05em;margin:0}
+    .intro-caption p{margin:6px 0 0;font-size:14px;color:var(--muted)}
+    .squiggle{font-size:32px;color:var(--moss);line-height:1;margin-bottom:8px;text-align:right}
+
+    .impact{padding:20px 0 0}
+    .impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .metric{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow)}
+    .metric .num{font-size:36px;font-weight:900;letter-spacing:-.06em;line-height:1;margin-bottom:7px}
+    .metric .label{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--moss)}
+    .metric p{margin:10px 0 0;font-size:13px;color:var(--muted)}
+    .impact-note{font-size:12px;color:#73817c;margin:12px 2px 0}
+
+    section{padding:104px 0}
+    .section-head{display:grid;grid-template-columns:1.08fr .92fr;gap:36px;align-items:end;margin-bottom:42px}
+    h2{font-size:clamp(34px,4.5vw,60px);line-height:1.08;letter-spacing:-.07em;font-weight:820;margin:10px 0 0}
+    .section-head p{margin:0;justify-self:end;max-width:480px;color:var(--muted);font-size:16px}
+
+    .story-grid{display:grid;grid-template-columns:.94fr 1.06fr;gap:34px;align-items:start}
+    .story-card{background:linear-gradient(180deg,var(--wash),#f4f6f1);border:1px solid var(--line);border-radius:20px;padding:34px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .story-card::after{content:'';position:absolute;right:-38px;bottom:-44px;width:170px;height:170px;background:radial-gradient(circle at center, rgba(47,107,91,.11), rgba(47,107,91,0));border-radius:50%}
+    .story-card .quote{font-family:var(--serif);font-size:clamp(32px,3.5vw,48px);line-height:1.18;letter-spacing:-.045em;color:#21443d;margin:0 0 28px}
+    .story-card .quote em{color:var(--moss)}
+    .story-list{display:grid;gap:14px}
+    .story-item{background:rgba(255,255,255,.65);border:1px solid rgba(190,204,195,.65);border-radius:16px;padding:16px 17px}
+    .story-item strong{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.11em;color:var(--moss)}
+    .story-item span{display:block;font-size:14px;color:#455851;margin-top:5px}
+    .prose p{font-size:17px;color:#43554f;margin:0 0 18px}
+    .timeline{margin-top:30px;padding-left:18px;border-left:1px solid #bfd0c3}
+    .t{position:relative;padding:0 0 20px 18px}.t:last-child{padding-bottom:0}.t::before{content:'';position:absolute;left:-24px;top:8px;width:10px;height:10px;background:var(--moss);border-radius:50%;box-shadow:0 0 0 5px var(--paper)}
+    .t strong{display:block;font-size:15px}.t small{display:block;margin-top:4px;font-size:13px;line-height:1.55;color:var(--muted)}
+
+    .dark{background:var(--deep);color:#fff}
+    .dark .eyebrow{color:#95deb0}
+    .dark .section-head p{color:#c8d5ce}
+    .belief-lead{font-family:var(--serif);font-size:clamp(28px,3.2vw,44px);line-height:1.35;letter-spacing:-.04em;margin:0 0 34px;color:#edf3ee;max-width:1000px}
+    .belief-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .belief{background:#1d3e39;border:1px solid #35554b;border-radius:18px;padding:28px;min-height:240px}
+    .belief span{display:block;font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:#9ee0b6}
+    .belief h3{font-size:24px;line-height:1.2;letter-spacing:-.04em;margin:26px 0 10px}
+    .belief p{margin:0;font-size:14px;color:#c5d5ce}
+
+    .approach{background:#eef2eb}
+    .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+    .step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow);min-height:220px}
+    .step .count{font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--moss)}
+    .step h3{margin:26px 0 10px;font-size:21px;line-height:1.2;letter-spacing:-.04em}
+    .step p{margin:0;font-size:14px;color:var(--muted)}
+    .framework-note{margin-top:22px;background:#fff;border:1px dashed #b2c4b5;border-radius:16px;padding:18px 20px;font-size:14px;color:#4d5f5a}
+
+    .work .section-head{margin-bottom:30px}
+    details.case{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:16px}
+    .case summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:120px 1fr auto;gap:24px;align-items:center;padding:28px 28px}
+    .case summary::-webkit-details-marker{display:none}
+    .case .num{font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--moss)}
+    .case h3{margin:4px 0 5px;font-size:30px;letter-spacing:-.05em;line-height:1.13}
+    .case .sub{margin:0;font-size:14px;color:var(--muted)}
+    .toggle{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:24px;line-height:1;transition:transform .2s ease;background:#fff}
+    details[open] .toggle{transform:rotate(45deg);background:var(--mint)}
+    .case-body{padding:0 28px 28px;border-top:1px solid var(--line);background:#fcfdfb}
+    .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;padding-top:22px}
+    .case-block h4{margin:0 0 7px;font-size:12px;text-transform:uppercase;letter-spacing:.11em;color:var(--moss)}
+    .case-block p, .case-block li{font-size:14px;color:var(--muted)}
+    .case-block p{margin:0;line-height:1.72}
+    .case-block ul{margin:0;padding-left:18px;line-height:1.7}
+    .callout{margin-top:22px;background:#f1f7ef;border-left:4px solid #7db98b;padding:18px 18px;border-radius:0 12px 12px 0;color:#325248;font-size:14px}
+    .disclaimer{font-size:12px;color:#6f7d79;margin-top:14px}
+
+    .voices-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .voice{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--shadow);position:relative}
+    .voice .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:900;color:var(--moss)}
+    .voice h3{margin:15px 0 8px;font-size:24px;line-height:1.2;letter-spacing:-.04em}
+    .voice blockquote{margin:0;font-size:16px;line-height:1.75;color:#3e504c}
+    .voice footer{margin-top:15px;font-size:13px;color:#73827d}
+    .voice .mark{position:absolute;right:22px;top:18px;font-size:44px;line-height:1;color:#dbe5dc}
+    .voice.alt{background:linear-gradient(180deg,#fff,#fbfff7)}
+    .voice.peach{background:linear-gradient(180deg,#fff,#fff7f1)}
+    .review-note{margin-top:14px;font-size:12px;color:#73807a}
+
+    .beyond{background:#f3f1ea}
+    .photo-grid{display:grid;grid-template-columns:1.3fr .85fr .85fr;gap:16px}
+    figure.photo{margin:0;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+    .photo img{width:100%;height:100%;object-fit:cover;min-height:320px}
+    .photo figcaption{padding:18px 18px 20px}
+    .photo span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:900;color:var(--moss)}
+    .photo h3{margin:10px 0 6px;font-size:24px;letter-spacing:-.04em;line-height:1.2}
+    .photo p{margin:0;font-size:14px;color:var(--muted)}
+    .beyond-bottom{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;margin-top:16px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--shadow)}
+    .card h3{margin:10px 0 10px;font-size:28px;line-height:1.15;letter-spacing:-.05em}
+    .card p{margin:0 0 14px;font-size:15px;color:var(--muted)}
+    .strips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .strips span{background:var(--wash);border-radius:999px;padding:8px 11px;font-size:12px;font-weight:800;color:#315149}
+    .privacy-note{font-size:12px;color:#6c7974;margin-top:12px}
+
+    .contact{padding:100px 0 70px}
+    .contact-box{background:var(--deep);color:#fff;border-radius:28px;padding:44px;position:relative;overflow:hidden}
+    .contact-box::after{content:'';position:absolute;right:-90px;bottom:-100px;width:320px;height:320px;background:radial-gradient(circle at center, rgba(215,248,180,.22), rgba(215,248,180,0));}
+    .contact-box h2{margin-top:12px;color:#fff}
+    .contact-box p{max-width:780px;color:#d5dfda;font-size:17px}
+    .contact-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+    footer.site{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:22px;font-size:12px;color:#a8bbb2}
+
+    @media (max-width:1100px){
+      .hero-wrap,.section-head,.story-grid,.beyond-bottom{grid-template-columns:1fr}
+      .section-head p{justify-self:start}
+      .impact-grid,.belief-grid,.steps,.case-grid,.voices-grid,.photo-grid{grid-template-columns:1fr 1fr}
+      .photo-grid figure:first-child{grid-column:span 2}
+    }
+    @media (max-width:760px){
+      .container{width:min(100% - 24px, 1180px)}
+      .nav{padding:8px 0;align-items:flex-start}
+      .navlinks{gap:12px;font-size:11px}
+      .hero{padding:40px 0 56px}
+      h1{font-size:clamp(42px,15vw,70px)}
+      .lead{font-size:17px}
+      .impact-grid,.belief-grid,.steps,.case-grid,.voices-grid,.photo-grid,.beyond-bottom{grid-template-columns:1fr}
+      .photo-grid figure:first-child{grid-column:auto}
+      .case summary{grid-template-columns:1fr auto;gap:12px}
+      .case .num{grid-column:1 / -1}
+      .story-card,.card,.metric,.voice,.step,.case-body,.intro-card,.contact-box{padding-left:20px;padding-right:20px}
+      .intro-stickers{max-width:88%}
+      .intro-caption{grid-template-columns:1fr}
+      .squiggle{text-align:left}
+    }
+  
+    /* Version 4.1 refinements */
+    .impact-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
+    .metric{padding:21px 19px}
+    .metric .num{font-size:clamp(29px,2.9vw,36px)}
+    .metric .label{font-size:11px}
+    .metric p{font-size:12px;line-height:1.55}
+    .ai-panel{margin-top:20px;display:grid;grid-template-columns:250px 1fr;gap:28px;align-items:center;background:#dfeadf;border:1px solid #b8cbb9;border-radius:20px;padding:28px 30px}
+    .ai-number{min-height:230px;border-radius:18px;background:#173b35;color:#edffe9;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;box-shadow:0 8px 25px rgba(16,44,43,.11)}
+    .ai-number strong{font-size:clamp(48px,5.5vw,75px);line-height:1;letter-spacing:-.075em}
+    .ai-small{text-transform:uppercase;letter-spacing:.14em;font-size:11px;color:#b4dfc6;font-weight:850}
+    .ai-copy h3{font-size:clamp(28px,3.2vw,40px);letter-spacing:-.055em;line-height:1.15;margin:9px 0 14px}
+    .ai-copy p{font-size:16px;margin:0 0 10px;color:#445e52}
+    .ai-copy .ai-aside{font-family:var(--serif);font-style:italic;color:#31584c;font-size:19px;margin-top:10px}
+    .ai-copy .ai-note{font-size:11px;color:#667d72;margin-top:13px}
+    @media(max-width:1100px){.impact-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media(max-width:760px){.impact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ai-panel{grid-template-columns:1fr;padding:17px}.ai-number{min-height:165px}.metric{padding:18px 15px}}
+    @media(max-width:440px){.impact-grid{grid-template-columns:1fr 1fr}.metric .num{font-size:31px}.metric .label{font-size:10px}.metric p{font-size:12px}}
+
+    .mobile-menu{display:none;position:relative}
+    .mobile-menu summary{cursor:pointer;list-style:none;display:flex;gap:12px;align-items:center;border:1px solid var(--line);background:#fff;border-radius:999px;font-size:13px;font-weight:850;padding:9px 15px}
+    .mobile-menu summary::-webkit-details-marker{display:none}
+    .mobile-menu summary span{font-size:18px;line-height:1}
+    .mobile-panel{position:absolute;right:0;top:calc(100% + 12px);z-index:101;display:flex;flex-direction:column;min-width:235px;background:#fff;border:1px solid var(--line);box-shadow:0 18px 35px rgba(17,46,37,.17);padding:12px;border-radius:15px}
+    .mobile-panel a{padding:10px 12px;border-radius:9px;text-decoration:none;color:var(--ink);font-size:13px;font-weight:750}
+    .mobile-panel a:hover{background:var(--wash)}
+    @media(max-width:760px){.navlinks{display:none}.mobile-menu{display:block}.nav{align-items:center;padding:10px 0;min-height:69px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="header">
+<div class="container nav">
+<a class="brand" href="#top">souptik<b>.</b><small>customer success portfolio</small></a>
+<nav aria-label="Primary navigation" class="navlinks">
+<a href="#story">My story</a>
+<a href="#beliefs">My philosophy</a>
+<a href="#work">Case studies</a>
+<a href="#voices">Recommendations</a>
+<a href="#beyond">Beyond work</a>
+<a class="pill light" href="https://www.linkedin.com/in/souptikchaki/" rel="noopener noreferrer" target="_blank">LinkedIn ↗</a>
+</nav>
+<details class="mobile-menu">
+<summary>Menu <span aria-hidden="true">☰</span></summary>
+<nav aria-label="Mobile navigation" class="mobile-panel">
+<a href="#story">My story</a><a href="#beliefs">My philosophy</a>
+<a href="#work">Case studies</a><a href="#voices">Recommendations</a>
+<a href="#beyond">Beyond work</a><a href="#contact">Connect</a>
+<a href="https://www.linkedin.com/in/souptikchaki/" rel="noopener noreferrer" target="_blank">LinkedIn ↗</a>
+</nav>
+</details></div>
+</header>
+<main id="main">
+<section class="hero" id="top">
+<div class="container hero-wrap">
+<div>
+<div class="hello-badge"><span aria-hidden="true" class="dot"></span> Hi, I’m Souptik. Nice to meet you.</div>
+<h1>Customer Success, <em>with a commercial edge</em>.</h1>
+<p class="lead">I work in enterprise Customer Success, where a good day means helping someone untangle a tricky problem, spotting what their business might need next, or finding a better way to get value from the technology they already have. I care about growth, but I care just as much about earning the trust behind it.</p>
+<div class="hero-actions">
+<a class="pill dark" href="#work">Explore my work ↓</a>
+<a class="pill mint" href="https://www.linkedin.com/in/souptikchaki/" rel="noopener noreferrer" target="_blank">Say hello on LinkedIn ↗</a>
+</div>
+<div aria-label="Quick profile highlights" class="quickbits">
+<span>Enterprise CSM</span>
+<span>Identity &amp; security</span>
+<span>Expansion &amp; retention</span>
+<span>Cycling / running / music</span>
+</div>
+<p class="mini-note">My career began in sales and account management. These days I work in identity and security, and outside work you’ll usually find me cycling, running or with music on.</p>
+</div>
+<div class="intro-card">
+<div class="portrait">
+<div class="intro-stickers">
+<span class="sticker">Always asking why</span>
+<span class="sticker">People first</span>
+<span class="sticker">Usually planning a ride</span>
+</div>
+<img alt="Souptik smiling while seated in a decorative doorway" height="1248" src="images/intro.webp" width="832"/>
+</div>
+<div class="intro-caption">
+<div>
+<div class="eyebrow">Introduction</div>
+<h2>A people person who also loves a good puzzle.</h2>
+<p>I like thoughtful questions, a bit of humour, and making complicated things feel surprisingly manageable.</p>
+</div>
+<div aria-hidden="true" class="squiggle">~</div>
+</div>
+</div>
+</div>
+<div class="container impact">
+<div class="impact-grid">
+<article class="metric"><div class="label">Portfolio</div><div class="num">£7.5M</div><p>Enterprise ARR portfolio managed in current Customer Success role.</p></article>
+<article class="metric"><div class="label">Retention</div><div class="num">135%</div><p>Net revenue retention highlighted in my CV and role summary.</p></article>
+<article class="metric"><div class="label">Renewals</div><div class="num">100%</div><p>Logo renewal rate across the referenced portfolio.</p></article>
+<article class="metric"><div class="label">Qualified leads</div><div class="num">36</div><p>Expansion opportunities I identified and qualified in partnership with our Sales teams.</p></article><article class="metric"><div class="label">Pipeline created</div><div class="num">~$500k</div><p>Qualified expansion opportunity pipeline I sourced. These opportunities are not all closed revenue.</p></article>
+</div>
+<p class="impact-note">Figures are from my working career records and are included here for review. Portfolio statistics and customer related outcomes require employer disclosure approval before this page is published.</p>
+</div>
+</section>
+<section id="story">
+<div class="container">
+<div class="section-head">
+<div>
+<div class="eyebrow">01 / My story</div>
+<h2>How I found my way into Customer Success.</h2>
+</div>
+<p>Sales taught me to spot an opportunity. Account management taught me how trust is earned. Customer Success is where those lessons clicked together.</p>
+</div>
+<div class="story-grid">
+<article class="story-card">
+<p class="quote">I love the moment a complicated problem starts to <em>make sense</em>, especially when you can see the relief on someone’s face.</p>
+<div class="story-list">
+<div class="story-item"><strong>What I do now</strong><span>Enterprise Customer Success in identity and security, with a focus on adoption, retention, expansion, and strategic guidance.</span></div>
+<div class="story-item"><strong>What shaped me</strong><span>Sales taught me how to uncover opportunity. Account management taught me how to keep trust. Customer Success let me bring the two together properly.</span></div>
+<div class="story-item"><strong>What I care about</strong><span>Helping customers grow more capable and confident, without losing sight of the business outcomes behind the relationship.</span></div>
+</div>
+</article>
+<div class="prose">
+<p>Today I work in Enterprise Customer Success at Okta, helping customers navigate identity and security. That means getting into the details of their technology, of course, but also understanding the people, priorities and decisions around it. I enjoy that mix. No two conversations are quite the same.</p>
+<p>Before Okta, I helped build a Customer Success practice from scratch at Onyx Capital. Earlier, my role in Enterprise Account Management at ClearTax gave me a strong commercial foundation. I learnt how to ask better questions, understand a buying decision and build relationships that last longer than a contract.</p>
+<p>Moving into Customer Success felt natural. I wanted to stay close to customers after the sale and actually help them achieve what they set out to do. I still love the commercial side of the job, but the part I care about most is figuring out how we can make a real difference to someone’s work.</p>
+<div class="timeline">
+<div class="t"><strong>Okta · Enterprise Customer Success</strong><small>Identity and security, strategic customer guidance, retention, expansion, stakeholder management, and across teams execution.</small></div>
+<div class="t"><strong>Onyx Capital · Founding CSM</strong><small>Built working directly with customers practice foundations, onboarding structure, demos, feedback loops, and customer advocacy in a demanding fintech environment.</small></div>
+<div class="t"><strong>ClearTax · Enterprise Account Management</strong><small>Sales and account growth, client demos, additional sales leadership, and early exposure to commercial ownership.</small></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="dark" id="beliefs">
+<div class="container">
+<div class="section-head">
+<div>
+<div class="eyebrow">02 / My philosophy</div>
+<h2>Why Customer Success?</h2>
+</div>
+<p>Because the best customer work isn’t reactive. It helps customers make sense of where they are, what’s in the way, and what they should tackle next.</p>
+</div>
+<p class="belief-lead">For me, Customer Success isn’t just about keeping customers happy. It’s about understanding what they’re trying to achieve, becoming the right support system around that ambition, and helping create scalable, sustainable growth for the customer and the company, one meaningful challenge at a time.</p>
+<div class="belief-grid">
+<article class="belief"><span>01</span><h3>Customer value first.</h3><p>Commercial growth matters to me. I believe it is earned by helping customers get better results first.</p></article>
+<article class="belief"><span>02</span><h3>Read the signal, not just the dashboard.</h3><p>Usage data matters, but so do repeated words, stakeholder hesitation, competitive anxiety, and quiet hints about what is not quite working yet.</p></article>
+<article class="belief"><span>03</span><h3>Make the hard thing feel workable.</h3><p>I like making complexity usable: breaking down technical or organisational challenges into something practical, paced, and achievable.</p></article>
+</div>
+</div>
+</section>
+<section class="approach">
+<div class="container">
+<div class="section-head">
+<div>
+<div class="eyebrow">03 / My approach</div>
+<h2>How I tend to work with customers.</h2>
+</div>
+<p>This is the rhythm behind most of my work, whether I’m helping an account grow, stabilising a difficult relationship, or guiding customers toward better value realisation.</p>
+</div>
+<div class="steps">
+<article class="step"><div class="count">01 / Listen closely</div><h3>Start with context.</h3><p>Understand the history, the original buying decision, the people involved, and the current business pressure before recommending anything new.</p></article>
+<article class="step"><div class="count">02 / Find the signal</div><h3>Look for what matters.</h3><p>Sometimes it’s in adoption data. Sometimes it’s in a repeated comment like “ROI” or a quiet concern about a future gap.</p></article>
+<article class="step"><div class="count">03 / Make it practical</div><h3>Reduce the sprawl.</h3><p>Turn complexity into something the customer can realistically act on, whether that’s a learning plan, a workshop, or a focused success path.</p></article>
+<article class="step"><div class="count">04 / Bring people together</div><h3>Coordinate the right expertise.</h3><p>Good Customer Success often means orchestrating product, engineering, sales, renewals, leadership, and customer stakeholders around the same problem.</p></article>
+<article class="step"><div class="count">05 / Keep one eye ahead</div><h3>Think beyond today.</h3><p>I like helping customers solve the present problem while preparing for the next one. That is where retention, expansion, and advocacy usually start to take shape.</p></article>
+</div>
+<div class="framework-note"><strong>A little lesson from experience:</strong> More meetings do not automatically mean more value. Sometimes the best thing you can do is give someone a focused 30 minute learning plan and let them get on with their day.</div>
+<div class="ai-panel">
+<div aria-label="One of forty selected employees" class="ai-number"><span class="ai-small">Selected as</span><strong>1 of 40</strong><span class="ai-small">employees</span></div>
+<div class="ai-copy">
+<div class="eyebrow">A different kind of problem solving</div>
+<h3>Part of the Okta 40 network.</h3>
+<p>I was chosen by a committee as one of 40 employees helping drive Okta’s AI transformation. I love experimenting with practical AI workflows, finding ways to make everyday work easier and sharing what works with the people around me.</p>
+<p class="ai-aside">The best part? Giving people more time for the things technology cannot replace, like listening well and exercising good judgement.</p>
+<p class="ai-note">The Okta 40 description is included for personal portfolio review. Confirm that the programme details may be shared publicly.</p></div>
+</div>
+</div>
+</section>
+<section class="work" id="work">
+<div class="container">
+<div class="section-head">
+<div>
+<div class="eyebrow">04 / Selected work</div>
+<h2>The kind of problems I like solving.</h2>
+</div>
+<p>Three stories from my experience, with customer identities and sensitive details omitted. They show how I approach account growth, retention and consultative customer work.</p>
+</div>
+<details class="case" open="">
+<summary><span class="num">Case study 01 / Growth</span><div><h3>Beyond Adoption.</h3><p class="sub">Turning a mature enterprise relationship into sustainable account growth.</p></div><span aria-hidden="true" class="toggle">+</span></summary>
+<div class="case-body">
+<div class="case-grid">
+<div class="case-block"><h4>The opportunity</h4><p>I inherited a mature enterprise customer with strong adoption, a highly technical team, and a stable deployment. The challenge wasn’t rescue. It was identifying what additional value could be unlocked without forcing an expansion agenda.</p></div>
+<div class="case-block"><h4>What I did</h4><p>I rebuilt stakeholder context, ran structured feature and exposure assessments, and shifted the conversation from current deployment to future readiness. I coordinated product, technical, and commercial teams to support demos, evaluations, and collaborative product feedback.</p></div>
+<div class="case-block"><h4>What changed</h4><ul><li>Closed a smaller expansion for additional users and capacity.</li><li>Developed a larger, approved budget expansion opportunity pending signature.</li><li>Deepened adoption of existing capabilities and grew customer advocacy.</li></ul></div>
+</div>
+<div class="callout"><strong>My takeaway:</strong> strong adoption is a milestone, not the destination. Some of the best expansion opportunities come from helping successful customers imagine what’s possible next.</div>
+</div>
+</details>
+<details class="case">
+<summary><span class="num">Case study 02 / Retention</span><div><h3>When the Champion Leaves.</h3><p class="sub">Rebuilding operational confidence, reducing P1 incidents, and protecting a strategic customer relationship.</p></div><span aria-hidden="true" class="toggle">+</span></summary>
+<div class="case-body">
+<div class="case-grid">
+<div class="case-block"><h4>The challenge</h4><p>An established customer lost its principal platform administrator with little knowledge transfer. New owners inherited a complex environment, critical issues increased, and confidence in the relationship came under pressure during a strategically sensitive period.</p></div>
+<div class="case-block"><h4>What I did</h4><p>I worked with the new stakeholders and internal technical teams to unpick critical business workflows, then designed a personalised learning plan requiring only 30 to 45 minutes per week. I also created a coordinated recovery path with Sales, Renewals, leadership, and Customer Success.</p></div>
+<div class="case-block"><h4>What changed</h4><ul><li>P1 incidents reduced from approximately 6 to 7 per week to zero across a subsequent month.</li><li>A material churn risk was removed through a successful renewal.</li><li>The customer moved from a previous one year term to a three year renewal.</li></ul></div>
+</div>
+<div class="callout"><strong>My takeaway:</strong> the real problem was not just technical. It was lost knowledge, reduced confidence, and limited capacity. Great retention work solves the human and operational challenge behind the incident.</div>
+</div>
+</details>
+<details class="case">
+<summary><span class="num">Case study 03 / Advisory</span><div><h3>The Value Behind the Metrics.</h3><p class="sub">Two examples of consultative Customer Success: value realisation and executive strategy.</p></div><span aria-hidden="true" class="toggle">+</span></summary>
+<div class="case-body">
+<div class="case-grid">
+<div class="case-block"><h4>03A · ROI and feature value</h4><p>With a technically mature FSI customer, I kept hearing one phrase: “return on investment.” Even though product usage looked healthy, I led an in person Feature Adoption Assessment to explore whether they were using the most relevant capabilities within what they already owned. That work helped surface optimisation opportunities and created stronger trust for future capability discussions.</p></div>
+<div class="case-block"><h4>03B · Benchmarking for executives</h4><p>With a large banking customer, I used a leadership transition as a moment to elevate the conversation. I translated internal adoption intelligence and industry patterns into a strategic workshop that spoke to what the CISO cared about most: competitive positioning, technology direction, and future challenges.</p></div>
+<div class="case-block"><h4>Why it matters</h4><ul><li>Not every healthy account needs a product pitch.</li><li>Sometimes customers first need help seeing value more clearly.</li><li>And sometimes executives need strategic context, not another dashboard.</li></ul></div>
+</div>
+<div class="callout"><strong>My takeaway:</strong> consultative Customer Success means adapting the conversation to what the customer actually values, whether that is ROI, operational confidence, or strategic direction.</div>
+</div>
+</details>
+<p class="disclaimer"><strong>Publication check:</strong> These drafts are based on work experience but do not identify customers. All numerical outcomes, internal programme details and other potentially sensitive information should be cleared before publishing publicly.</p>
+</div>
+</section>
+<section id="voices">
+<div class="container">
+<div class="section-head">
+<div>
+<div class="eyebrow">05 / Recommendations</div>
+<h2>What people say it’s like to work with me.</h2>
+</div>
+<p>I value feedback that speaks to how I show up: technically curious, supportive under pressure, and willing to put real thought into helping others succeed.</p>
+</div>
+<div class="voices-grid">
+<article class="voice"><div aria-hidden="true" class="mark">“</div><div class="tag">Customer perspective</div><h3>Proactive, technical, and genuinely caring.</h3><blockquote>“He didn't just respond to our needs; he anticipated challenges and provided strategic guidance that drove real business value for the organization.”</blockquote><footer>Excerpted from a LinkedIn recommendation shared for this portfolio · customer identity intentionally withheld</footer></article>
+<article class="voice alt"><div aria-hidden="true" class="mark">“</div><div class="tag">Colleague perspective · Okta</div><h3>A colleague who knows I will show up.</h3><blockquote>“When I joined Okta as a CSM a couple of years back, Souptik had already set the benchmark. From day one, he became my compass and an indispensable guide through Okta ecosystem.”</blockquote><footer>Aleksandra Makówka · Customer Success Manager</footer></article>
+<article class="voice peach"><div aria-hidden="true" class="mark">“</div><div class="tag">Manager perspective · Onyx</div><h3>Calm under pressure and trusted by the team.</h3><blockquote>“He performed really well even under the high pressure environment of a trading firm... He was always willing to help and share his knowledge with others. Souptik inspires trust in everyone who had the privilege of working with him.”</blockquote><footer>Bruno Chaina · Software Engineer</footer></article>
+<article class="voice"><div aria-hidden="true" class="mark">“</div><div class="tag">Colleague perspective · ClearTax</div><h3>Ownership, professionalism, and a strong consulting instinct.</h3><blockquote>“Souptik is someone who is very professional and has great soft skills... He takes responsibilities and drives things with ownership... His expertise as a consultant will be a great addition to any team.”</blockquote><footer>Excerpt from a colleague recommendation shared for this portfolio</footer></article>
+</div>
+<p class="review-note">These recommendations are shown as selected excerpts from feedback supplied by me for this portfolio. Before public launch, I’d make sure I’m comfortable reusing them in this format and, where needed, ask for permission.</p>
+</div>
+</section>
+<section class="beyond" id="beyond">
+<div class="container">
+<div class="section-head">
+<div>
+<div class="eyebrow">06 / Beyond work</div>
+<h2>The other parts of me matter too.</h2>
+</div>
+<p>The CV version of me is only half the story. There are bikes, finish lines, playlists, travel plans and a lot of good conversations in the other half.</p>
+</div>
+<div class="photo-grid">
+<figure class="photo"><img alt="Cyclists gathering for a community ride on a London street" height="936" src="images/cycling.webp" width="1664"/><figcaption><span>01 / Community</span><h3>Cycling.</h3><p>A long ride clears my head like nothing else. Add a good group and a route I haven’t tried, and I’m happy.</p></figcaption></figure>
+<figure class="photo"><img alt="Souptik smiling and holding a medal after a running event" height="1472" src="images/running.webp" width="828"/><figcaption><span>02 / Consistency</span><h3>Running.</h3><p>I enjoy the small wins along the way, although crossing the finish line is pretty hard to beat.</p></figcaption></figure>
+<figure class="photo"><img alt="Souptik in safety gear on a desert quad biking adventure" height="1639" src="images/adventure.webp" width="1242"/><figcaption><span>03 / Curiosity</span><h3>Trying the unfamiliar route.</h3><p>I like trying something new, even when the helmet makes me look like I’m in a science fiction film.</p></figcaption></figure>
+</div>
+<div class="beyond-bottom">
+<article class="card">
+<div class="eyebrow">A few more things</div>
+<h3>A soundtrack for most things, and curiosity for the rest.</h3>
+<p>Music is usually playing somewhere in the background. I enjoy meeting people, learning from them and helping where I can. That curiosity is probably the thread connecting my work, my hobbies and everything in between.</p>
+<div class="strips"><span>Cycling</span><span>Running</span><span>Music</span><span>Travel</span><span>New experiences</span><span>Curiosity</span></div>
+</article>
+<article class="card">
+<div class="eyebrow">Find me elsewhere</div>
+<h3>The ride continues off the page.</h3>
+<p>LinkedIn has my work stories. Strava has the proof that I occasionally choose a very early morning ride.</p>
+<div class="hero-actions">
+<a class="pill dark" href="https://strava.app.link/RBkmlttjo7b" rel="noopener noreferrer" target="_blank">Strava ↗</a>
+<a class="pill light" href="https://www.linkedin.com/in/souptikchaki/" rel="noopener noreferrer" target="_blank">LinkedIn ↗</a>
+</div>
+</article>
+</div>
+<p class="privacy-note">These are my personal photographs. If I publish the site publicly, I’ll do a final pass on any group images to make sure I’m comfortable with what’s shown.</p>
+</div>
+</section>
+<section class="contact" id="contact">
+<div class="container">
+<div class="contact-box">
+<div class="eyebrow">07 / Let’s connect</div>
+<h2>Good work starts with a conversation. Shall we have one?</h2>
+<p>If you care about thoughtful Customer Success, useful technology, better customer relationships, or even cycling and music, I suspect we’ll have plenty to talk about.</p>
+<div class="contact-actions">
+<a class="pill mint" href="https://www.linkedin.com/in/souptikchaki/" rel="noopener noreferrer" target="_blank">Connect on LinkedIn ↗</a>
+<a class="pill light" href="#top">Back to top ↑</a>
+</div>
+<footer class="site"><span>© <span id="year">2026</span> Souptik Chaki</span><span>Built independently with care. Personal views only; selected customer stories are anonymised.</span></footer>
+</div>
+</div>
+</section>
+</main>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
