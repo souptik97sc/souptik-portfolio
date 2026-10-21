@@ -1,4 +1,5 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -271,8 +272,27 @@
       html{scroll-behavior:auto}
       .pill,.toggle{transition:none}
     }
-</style>
 
+/* V5: Credentials and customer feedback */
+.credential-section{background:#f0f3ed;padding:84px 0 92px}
+.credential-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.credential-card{background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);padding:27px;border-radius:18px;min-width:0;min-height:210px}
+.credential-tag{font-size:11px;letter-spacing:.13em;text-transform:uppercase;font-weight:850;color:var(--moss)}
+.credential-card h3{font-size:24px;line-height:1.2;letter-spacing:-.045em;margin:17px 0 10px}
+.credential-card p{font-size:14px;color:var(--muted);margin:0;line-height:1.6}
+.credential-foot{margin-top:22px;border-top:1px solid var(--line);padding-top:17px;color:#4a6358;font-size:14px}
+.credential-foot strong{color:var(--ink)}
+.customer-feature{display:grid;grid-template-columns:.78fr 1.22fr;gap:27px;background:#e9f1e7;border:1px solid #c9d9cb;border-radius:20px;padding:30px 32px;margin-bottom:18px;box-shadow:var(--shadow)}
+.customer-feature .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:900;color:var(--moss)}
+.customer-feature h3{font-size:clamp(25px,3vw,36px);line-height:1.16;letter-spacing:-.05em;margin:15px 0 0}
+.customer-feature .summary{font-size:18px;line-height:1.65;color:#315148;margin:0}
+.customer-feature .attribution{font-size:12px;margin-top:16px;color:#60786c}
+.customer-feature .customer-promise{font-size:14px;color:#506d5f;line-height:1.6;margin-top:12px}
+.testimonials-after{display:flex;justify-content:flex-end;margin-top:16px}
+.testimonials-after a{font-size:13px;font-weight:800;text-decoration:none;color:var(--moss);border-bottom:1px solid currentColor;padding-bottom:2px}
+@media(max-width:960px){.credential-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.customer-feature{grid-template-columns:1fr}}
+@media(max-width:760px){.credential-section{padding:70px 0}.credential-grid{grid-template-columns:1fr}.credential-card{min-height:0}.customer-feature{padding:24px 21px;gap:14px}.customer-feature h3{margin-top:10px}.customer-feature .summary{font-size:16px}}
+</style>
 <meta content="website" property="og:type"/>
 <meta content="Souptik Chaki | Enterprise Customer Success Portfolio" property="og:title"/>
 <meta content="Enterprise Customer Success, strategic account growth, retention and a little of life beyond the dashboard." property="og:description"/>
@@ -339,7 +359,6 @@
 <h2>A people person who loves a good puzzle.</h2>
 <p>I like thoughtful questions, a bit of humour and turning complicated challenges into practical next steps.</p>
 </div>
-
 </div>
 </div>
 </div>
@@ -435,14 +454,22 @@
 <p>Recognised at the EMEA Customer Success All Hands for helping customers find a faster path to measurable value. A team effort, and one I'm proud to have contributed to.</p>
 </div>
 </div>
-
 </div>
 </section>
-<section class="work" id="work">
+<section class="credential-section" id="credentials"><div class="container"><div class="section-head">
+<div><div class="eyebrow">04 / Credentials</div><h2>The thinking has a technical foundation.</h2></div>
+<p>I enjoy the people side of Customer Success, but I also believe good advice comes from understanding the systems, processes and decisions behind the work.</p></div>
+<div class="credential-grid">
+<article class="credential-card"><div class="credential-tag">Identity and security</div><h3>Okta Certified Professional &amp; Administrator</h3><p>Technical grounding that helps me have more informed conversations with practitioners and connect platform decisions to business needs.</p></article>
+<article class="credential-card"><div class="credential-tag">Operational excellence</div><h3>Lean Six Sigma Green Belt</h3><p>A process improvement lens that supports how I prioritise friction, remove unnecessary steps and build repeatable customer experiences.</p></article>
+<article class="credential-card"><div class="credential-tag">Leadership and management</div><h3>CMI Level 7</h3><p>A broader management perspective alongside my experience coordinating teams, stakeholders and commercial outcomes.</p></article>
+</div>
+<p class="credential-foot"><strong>Academic foundation:</strong> MSc Management, Distinction, Cranfield School of Management. <a href="https://www.linkedin.com/in/souptikchaki/" rel="noopener noreferrer" target="_blank">More about my background on LinkedIn ↗</a></p>
+</div></section><section class="work" id="work">
 <div class="container">
 <div class="section-head">
 <div>
-<div class="eyebrow">04 / Selected work</div>
+<div class="eyebrow">05 / Selected work</div>
 <h2>A few problems I’ve enjoyed solving.</h2>
 </div>
 <p>Each example focuses on my approach and contribution. The stories have been generalised to protect customer relationships, with commercial outcomes distinguished from opportunities still in progress.</p>
@@ -452,7 +479,7 @@
 <div class="case-body">
 <div class="case-grid">
 <div class="case-block"><h4>The opportunity</h4><p>I took on an established enterprise account with strong adoption and a skilled technical team. Nothing was visibly broken. The opportunity was to understand what had changed in the customer’s business and whether we could help them do more.</p></div>
-<div class="case-block"><h4>What I did</h4><p>I started with the relationship and the original buying decisions. Together with colleagues in Sales and technical teams, I explored existing capabilities, future requirements and relevant solutions, making room for the customer’s own expertise in those discussions.</p></div>
+<div class="case-block"><h4>What I did</h4><p>I started with the relationship and the original buying decisions. Together with colleagues in Sales and technical teams, I explored existing capabilities, future requirements and relevant solutions while making room for the customer’s own expertise in those discussions.</p></div>
 <div class="case-block"><h4>What changed</h4><ul><li>Supported a completed expansion within the existing product relationship.</li><li>Helped develop a separate strategic opportunity that progressed to commercial discussions.</li><li>Built a closer partnership through technical collaboration and customer advocacy.</li></ul></div>
 </div>
 <div class="callout"><strong>What I took away:</strong> Good adoption is a starting point. The next phase of growth comes from understanding where the customer wants to go, not from arriving with a sales pitch.</div>
@@ -475,37 +502,38 @@
 <div class="case-grid">
 <div class="case-block"><h4>03A · Making adoption more meaningful</h4><p>One customer had excellent usage figures, but kept coming back to the question of return on investment. I facilitated a detailed feature review to explore which capabilities were relevant to their objectives and where their existing investment could work harder for them.</p></div>
 <div class="case-block"><h4>03B · Bringing strategy into the room</h4><p>For another customer, the priority was understanding wider industry direction. I prepared a tailored strategic discussion around broad technology themes and future needs, helping senior stakeholders explore their choices beyond the usual adoption review.</p></div>
-<div class="case-block"><h4>Why these approaches worked</h4><ul><li>They began with the customer’s priorities, not a standard presentation.</li><li>They connected technical capabilities with business decisions.</li><li>They opened the door to more relevant, conversations about what comes next.</li></ul></div>
+<div class="case-block"><h4>Why these approaches worked</h4><ul><li>They began with the customer’s priorities, not a standard presentation.</li><li>They connected technical capabilities with business decisions.</li><li>They opened the door to more relevant conversations about what comes next.</li></ul></div>
 </div>
 <div class="callout"><strong>What I took away:</strong> Good advice looks different for every customer. Sometimes the most valuable thing a CSM can do is ask a better question, then bring the right context to the conversation.</div>
 </div>
 </details>
-
 </div>
 </section>
 <section id="voices">
 <div class="container">
 <div class="section-head">
 <div>
-<div class="eyebrow">05 / Recommendations</div>
+<div class="eyebrow">06 / Recommendations</div>
 <h2>Kind words from people I’ve worked with.</h2>
 </div>
 <p>What I value most about these recommendations is that they speak to how I work with others, share what I know and show up when things get complicated.</p>
 </div>
-<div class="voices-grid">
-
+<article class="customer-feature"><div>
+<div class="tag">Customer perspective</div><h3>Feedback that matters to me.</h3>
+<p class="customer-promise">Ultimately, the customer experiences the work. Their perspective matters more than any slide about customer centricity.</p></div>
+<div><p class="summary">A customer recognised my ability to combine technical and functional understanding with proactive problem solving. Their feedback highlighted clear explanations, genuine care and strategic guidance that helped them work through challenges and focus on business value.</p>
+<p class="attribution">Editorial summary of a LinkedIn recommendation. Customer identity withheld.</p></div></article><div class="voices-grid">
 <article class="voice alt"><div aria-hidden="true" class="mark">“</div><div class="tag">Team recommendation · Okta</div><h3>A thoughtful teammate and a sounding board.</h3><blockquote>“When I joined Okta as a CSM a couple of years back, Souptik had already set the benchmark.”</blockquote><footer>Aleksandra Makówka · Customer Success Manager, Okta</footer></article>
 <article class="voice peach"><div aria-hidden="true" class="mark">“</div><div class="tag">Former manager · Onyx Capital</div><h3>Someone people can count on.</h3><blockquote>“He was always willing to help and share his knowledge with others. Souptik inspires trust in everyone who had the privilege of working with him.”</blockquote><footer>Bruno Chaina · Former manager, Onyx Capital</footer></article>
 <article class="voice"><div aria-hidden="true" class="mark">“</div><div class="tag">Former colleague · ClearTax</div><h3>Ownership that people notice.</h3><blockquote>“He is someone who takes responsibilities and drives things with ownership.”</blockquote><footer>Former colleague · LinkedIn recommendation</footer></article>
-</div>
-
+</div><div class="testimonials-after"><a href="https://www.linkedin.com/in/souptikchaki/" rel="noopener noreferrer" target="_blank">Explore more recommendations on LinkedIn ↗</a></div>
 </div>
 </section>
 <section class="beyond" id="beyond">
 <div class="container">
 <div class="section-head">
 <div>
-<div class="eyebrow">06 / Beyond work</div>
+<div class="eyebrow">07 / Beyond work</div>
 <h2>There’s more to life than dashboards.</h2>
 </div>
 <p>The CV version of me is only one part of the story. There are long rides, finish lines, playlists and a few spontaneous adventures in the other part.</p>
@@ -532,13 +560,12 @@
 </div>
 </article>
 </div>
-
 </div>
 </section>
 <section class="contact" id="contact">
 <div class="container">
 <div class="contact-box">
-<div class="eyebrow">07 / Let’s connect</div>
+<div class="eyebrow">08 / Let’s connect</div>
 <h2>Good work usually starts with a good conversation.</h2>
 <p>If you are thinking about enterprise Customer Success, strategic account growth, identity and security, or even a new cycling route, I would be happy to connect.</p>
 <div class="contact-actions">
